@@ -51,7 +51,13 @@ header{
     position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: #eeeeee27;
+}
+.header-color{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg,#de30593f,#FF8D043f,#1B777E3f,#8EDFD63f,#22BBBB3f);
+    filter: blur(5px);
 }
 nav{
     height: 75px;
