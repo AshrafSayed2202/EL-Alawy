@@ -45,6 +45,14 @@ body{
     color: white;
     text-align: center;
     font-size: 3em;
+    transition: 0.8s;
+    opacity: 0;
+    position: relative;
+    top: -100px;
+}
+.main-heading.active{
+    opacity: 1;
+    top: 0;
 }
 /* Header */
 header{
@@ -117,7 +125,7 @@ nav ul li.active::before{
 }
 /* for home page */
 section.landing{
-    background-image: linear-gradient(rgba(0,0,0,0),rgb(28 120 137 / 33%),rgb(28 120 137 / 81%));
+    background-image: linear-gradient(rgba(0,0,0,0),rgb(28 120 137 / 15%),rgb(28 120 137 / 81%));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -170,6 +178,15 @@ section.landing .landing-text p{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    transition: 2s;
+    transition-delay: 0.5s;
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+}
+.news-cards.active{
+    opacity: 1;
+    bottom: 0;
 }
 .news-card{
     width: 30%;
@@ -242,4 +259,71 @@ section.landing .landing-text p{
     opacity: 0.5;
     user-select: none;
     font-size: 30px;
+}
+.numbers-cards{
+    display: flex;
+    gap: 20px;
+}
+.number-card{
+    background-color: #8EDFD6;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    position: relative;
+    bottom: -140px;
+    transition: 0.8s;
+    transition-property: bottom , opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.number-card::before{
+    content: "";
+    width: 100%;
+    height: 30%;
+    background-color: #22BBBB;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.number-card.card1{
+    transition-delay: 0s;
+}
+.number-card.card2{
+    transition-delay: 0.5s;
+}
+.number-card.card3{
+    transition-delay: 1s;
+}
+.number-card.card4{
+    transition-delay: 1.5s;
+}
+.number-card.active{
+    opacity: 1;
+    bottom: 0;
+}
+.number-card i{
+    color: #0F4554;
+    font-size: 100px;
+}
+
+.number-card .title{
+    color: #0F4554;
+    font-size: 3em;
+    z-index: 2;
+}
+.number-card .increament{
+    color: #0A7D00;
+    font-size: 4em;
+    transform: translateX(-10px);
+}
+.number-card:hover{
+    transition: background-color 1s;
+    background-color: #0F4554;
+}
+.number-card:hover i{
+    transition: color 1s;
+    color: #8EDFD6;
 }

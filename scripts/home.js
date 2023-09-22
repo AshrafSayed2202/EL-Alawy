@@ -20,5 +20,23 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
 }
-// Call the function
-typeWriter();
+var writerChecker = true
+function writerActivate(){
+    if(writerChecker){
+        typeWriter()
+    }
+}
+window.onscroll = ()=>{
+    if(window.scrollY >= 700){
+        writerActivate();
+        writerChecker = false
+    }
+    if(window.scrollY >= 330){
+        document.querySelector('.news .main-heading').classList.add('active')
+        document.querySelector('.news-cards').classList.add('active')
+    }
+    if(window.scrollY >= 900){
+        document.querySelector('.numbers .main-heading').classList.add('active')
+        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})
+    }
+}
