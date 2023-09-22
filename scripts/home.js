@@ -39,4 +39,8 @@ window.onscroll = ()=>{
         document.querySelector('.numbers .main-heading').classList.add('active')
         document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})
     }
+    if(window.scrollY >= 1400){
+        document.querySelector('.semi-footer h1').classList.add('active')
+        document.querySelector('.semi-footer p').classList.add('active')
+    }
 }
