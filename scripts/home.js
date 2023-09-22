@@ -28,19 +28,15 @@ function writerActivate(){
 }
 window.onscroll = ()=>{
     if(window.scrollY >= 700){
-        writerActivate();
-        writerChecker = false
+        setTimeout(()=>{writerActivate();
+            writerChecker = false},500)
     }
     if(window.scrollY >= 330){
         setTimeout(()=>{document.querySelector('.news .main-heading').classList.add('active')
-        document.querySelector('.news-cards').classList.add('active')},1000)
+        document.querySelector('.news-cards').classList.add('active')},500)
     }
     if(window.scrollY >= 900){
         setTimeout(()=>{document.querySelector('.numbers .main-heading').classList.add('active')
-        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})},1000)
-    }
-    if(window.scrollY >= 1600){
-        setTimeout(()=>{document.querySelector('.semi-footer h1').style.right = "0"
-        document.querySelector('.semi-footer p').style.left = "0"},1000)
+        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})},500)
     }
 }
