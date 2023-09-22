@@ -369,16 +369,10 @@ section.landing .landing-text p{
     right: -100%;
     transition: 1.5s;
 }
-.semi-footer h1.active{
-    right: 0;
-}
 .semi-footer p{
     position: relative;
     left: -150%;
     transition: 1.5s;
-}
-.semi-footer p.active{
-    left: 0;
 }
 /* Footer */
 footer{

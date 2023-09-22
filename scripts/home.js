@@ -32,15 +32,15 @@ window.onscroll = ()=>{
         writerChecker = false
     }
     if(window.scrollY >= 330){
-        document.querySelector('.news .main-heading').classList.add('active')
-        document.querySelector('.news-cards').classList.add('active')
+        setTimeout(()=>{document.querySelector('.news .main-heading').classList.add('active')
+        document.querySelector('.news-cards').classList.add('active')},1000)
     }
     if(window.scrollY >= 900){
-        document.querySelector('.numbers .main-heading').classList.add('active')
-        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})
+        setTimeout(()=>{document.querySelector('.numbers .main-heading').classList.add('active')
+        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})},1000)
     }
-    if(window.scrollY >= 1400){
-        document.querySelector('.semi-footer h1').classList.add('active')
-        document.querySelector('.semi-footer p').classList.add('active')
+    if(window.scrollY >= 1600){
+        setTimeout(()=>{document.querySelector('.semi-footer h1').style.right = "0"
+        document.querySelector('.semi-footer p').style.left = "0"},1000)
     }
 }
