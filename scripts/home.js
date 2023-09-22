@@ -29,14 +29,14 @@ function writerActivate(){
 window.onscroll = ()=>{
     if(window.scrollY >= 700){
         setTimeout(()=>{writerActivate();
-            writerChecker = false},500)
+            writerChecker = false},200)
     }
     if(window.scrollY >= 330){
         setTimeout(()=>{document.querySelector('.news .main-heading').classList.add('active')
-        document.querySelector('.news-cards').classList.add('active')},500)
+        document.querySelector('.news-cards').classList.add('active')},200)
     }
     if(window.scrollY >= 900){
         setTimeout(()=>{document.querySelector('.numbers .main-heading').classList.add('active')
-        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})},500)
+        document.querySelectorAll('.numbers .number-card').forEach((e)=>{e.classList.add('active')})},200)
     }
 }
